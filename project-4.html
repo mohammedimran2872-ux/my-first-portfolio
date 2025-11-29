@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://kit.fontawesome.com/c0079a392f.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+
+<style>
+  *{
+    overflow: hidden;
+  }
+    body{
+        background-color: black;
+    }
+         .pro-cont-1 {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      gap: 30px;
+     color: white;
+    }
+
+    .pro-cont-1 .cont:first-child {
+      width: 50%;
+      height: 100%;
+    }
+
+    .pro-cont-1>.cont:first-child>img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .pro-cont-1>.cont:nth-child(2) {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: rgb(232, 225, 225);
+    }
+
+    .pro-cont-1>.cont:last-child {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content: space-between;
+
+    }
+    .pro-cont-1>.cont:last-child img{
+            width: 200px;
+            height: 300px;
+    }
+    label{
+      cursor: pointer;
+    }
+    .collection>img{
+      transition: all 3s;
+    }
+    .collection:hover>img{
+      transform: scale(1.5);
+    }
+
+.cont>i{
+    position: absolute;
+    font-size: 55px;
+    color: rgb(239, 235, 235);
+}
+.imag{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.animation-img{
+  animation-name: image;
+  animation-duration: 3s;
+}
+@keyframes image {
+  from{
+    transform: scale(1.5) translateX(200px);
+    
+  }
+  to{
+  transform: scale(1) translateX(0px);
+  }
+}
+.para{
+  animation-name: para;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-fill-mode:forwards;
+  
+  /* transform: translateY(-300px); */
+  opacity: 0;
+}
+@keyframes para {
+  from{
+    transform: translateY(-300px);
+    opacity: 1;
+  }
+  to{
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+.end-img{
+  animation-name: end-img;
+  animation-duration: 5s;
+  animation-delay: 3s;
+  transform: translateX(500px);
+  animation-fill-mode: forwards;
+}
+@keyframes end-img {
+    from{
+      transform: translateX(500px);
+    }
+    to{
+    transform:translateX(0px) ;
+  }
+}
+.pro-cont-1>.cont:last-child p{
+      color: white;
+      background-color: rgb(57, 55, 55);
+      border-radius: 10px;
+      width: 100px;
+      text-align: center;
+      padding: 8px;
+    }
+
+
+@media only  screen and (min-width:300px) and (max-width:600px){
+         .pro-cont-1 {
+          flex-direction: column;
+          align-items: center;
+          height: max-content;
+         }
+         .cont,.pro-cont-1>.cont:nth-child(2),.pro-cont-1 .cont:first-child{
+          width: 100%;
+         }
+          
+}
+
+
+
+
+</style>
+
+
+
+
+</head>
+
+<body>
+     <div class="pro-cont-1">
+    <div class="cont imag  animation-img">
+      <img src="./project-4.jpg" alt="">
+      <i class="fa-solid fa-circle-play"></i>
+    </div>
+    <div class="cont para">
+      <h1>Project-4</h1>
+      <div>
+        <h1>Framer</h1>
+        <p>;Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fugiat praesentium maiores facere hic
+          adipisci! Ea asperiores qui aliquid quod vero id officiis et nesciunt blanditiis? Pariatur porro velit fugiat.
+        </p>
+      </div>
+    </div>
+    <div class="cont end-img">
+      <a href="./portfolio.html #project"><p>Back</p></a>
+      <img src="./project-4.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>
